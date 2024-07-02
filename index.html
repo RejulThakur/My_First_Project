@@ -1,0 +1,427 @@
+{% extends "base.html" %}
+
+{% block start %}
+{% load static %}
+<div class="cd">
+
+    {% for j in data1 %}
+    <form method="post" action="/eye/">
+        {% csrf_token %}
+        <div class="box">
+            <div class="g">
+                <a href="" data-bs-target="1_round"><img src="{% static 'images/' %}{{j.image1}}"
+                        style="height: 105px; margin-top: 6px;">
+                    <input type="hidden" value="{{j.category_name}}" name="category">
+                    <input type="submit" value="{{j.category_name}}"
+                        style="border: 0px;color: rgb(85, 83, 83);font-size: 20px;background: rgb(252, 251, 251);margin-top: 15px;">
+                </a>
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+</div>
+<!-- product id
+product name 
+quantity
+price
+user name -->
+
+
+<!-- <section class="sc">
+
+    <div class="ef">
+        <div class="slide">
+            <img src="https://static1.lenskart.com/media/desktop/img/sep22/jj-titanium/Web-Banner.gif">
+        </div>
+        <div class="slide">
+            <img src="https://static1.lenskart.com/media/desktop/img/nov23/gulmarg/Web-banner%20option%201-min.png">
+        </div>
+        <div class="slide">
+            <img src="https://static1.lenskart.com/media/desktop/img/sep22/jj-titanium/Web-Banner.gif">
+        </div>
+        <div class="slide">
+            <img src="https://static1.lenskart.com/media/desktop/img/republic/chic-metal/web.jpg">
+        </div>
+        <div class="slide">
+            <img src="https://static5.lenskart.com/media/uploads/wedding-desk.jpg">
+        </div>
+    </div>
+
+
+    <span class="arrow left">&#10094;</span>
+    <span class="arrow right">&#10095;</span>
+</section> -->
+
+<div class="sli">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for sd in slider %}
+            <div class="carousel-item active">
+                <img src="{% static 'images/' %}{{sd.image}}" class="d-block w-100">
+            </div>
+            {% endfor %}
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true" style="width: 45px;height: 276px;"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 45px;height: 276px;"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+<section class="bn">
+    <div class="gh">
+        <div class="img80">
+            <img src="https://static1.lenskart.com/media/desktop/img/Apr22/Bannerforexport.jpg">
+        </div>
+    </div>
+</section>
+
+
+
+<div>
+    <section id="idf_banner-0" class="BannerStaticHTMLstyle__Section-sc-1stpyr-3 euVHHM ga-banner-img-obeserver"
+        style="padding-bottom: 10px;">
+        <div class="BannerStaticHTMLstyle__BannerAndStaticHTMWrapper-sc-1stpyr-2 lnPjAp">
+            <center>
+                <div class="wear-the-trend-sect justcenter flex w90 mt45">
+                    <div class="wearTrend">WEAR THE
+                        <div style="margin-top:-19px">
+                            TREND
+                        </div>
+                        <div class="TrendyTag">Our hottest collections</div>
+                    </div>
+                    <div class="SLIDE1 flex">
+
+                        <div class="leftarrow1">
+                            ❮
+                        </div>
+
+                        <div style="display: flex;">
+                            {% for s in data3 %}
+                            <form method="post" action="/round/">
+                                {% csrf_token %}
+
+                                <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                    data-action="WEAR_THE_TREND" data-label="1_round" href="/round" target="_blank">
+                                    <img src="{% static 'images/' %}{{s.image}}">
+                                    <!-- <div class="trendtitle">{{s.shape_name}}</div> -->
+                                    <input type="hidden" value="{{s.shape_name}}" name="shape">
+                                    <input class="trendcta" type="submit" value="{{s.shape_name}}"
+                                        style="font-size: 15px;padding-top: 0px;padding-bottom: 0px;height: 45px;">
+                                    <!-- <div class="trendcta">Explore</div> -->
+                                </a>
+                            </form>
+                            {% endfor %}
+                        </div>
+                        <!-- <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="2_cat_eye"
+                                href="/eyeglasses/brands/vincent-chase-eyeglasses/cat-eye.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/cateeye.jpg">
+                                <div class="trendtitle">Cat-Eye</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="3_club_master"
+                                href="/eyewear/promotion/frame-shape/clubmasters.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/clubmaster.jpg">
+                                <div class="trendtitle">Clubmaster</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="4_transparent"
+                                href="/eyeglasses/promotions/vc-transparent.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/trans.jpg">
+                                <div class="trendtitle">Transparent</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div> -->
+                        <div class="rightarrow1">❯</div>
+                    </div>
+                    <div class="SLIDE2 flex" style="display:none">
+                        <div class="leftarrow2">❮</div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="5_blend_edit"
+                                href="/eyeglasses/brands/vincent-chase-eyeglasses/blend-edit.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/blend.jpg">
+                                <div class="trendtitle">Blend Edit</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="6_air_clip_on"
+                                href="/eyeglasses/brands/vincent-chase-eyeglasses/air-clip-on.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/clipon.jpg">
+                                <div class="trendtitle">Air Clip On</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="7_air_flex"
+                                href="/eyeglasses/brands/vincent-chase-eyeglasses/air-flex.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/airflex.jpg">
+                                <div class="trendtitle">Air Flex</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div>
+                            <a class="getGaData" data-event="Banner Clicks" data-category="Banner Clicks"
+                                data-action="WEAR_THE_TREND" data-label="8_retro_aviator"
+                                href="/eyeglasses/brands/vincent-chase-eyeglasses/aviator.html">
+                                <img src="https://static1.lenskart.com/media/desktop/img/Sep21/aviator.jpg">
+                                <div class="trendtitle">Retro Aviator</div>
+                                <div class="trendcta">Explore</div>
+                            </a>
+                        </div>
+                        <div class="rightarrow2">❯</div>
+                    </div>
+                </div>
+            </center>
+        </div>
+    </section>
+</div>
+
+
+<!-- <div class="n container">
+                <div class="box70">
+                    <div class="tr">
+                        <div class="wear">
+                            <p>WEAR THE</p>
+                        </div>
+                        <div class="trend">
+                            <p>TREND</p>
+                        </div>
+                        <div class="hot">
+                            <p>Our hottest collections</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="imgs0">
+                    <img src="https://static1.lenskart.com/media/desktop/img/Sep21/image179.png" id="im" class="rounded float-start" alt="..." >
+                    <img src="https://static1.lenskart.com/media/desktop/img/Sep21/cateeye.jpg" class="rounded float-end" alt="...">
+                    <img src="https://static1.lenskart.com/media/desktop/img/Sep21/clubmaster.jpg" class="rounded float-start" alt="...">
+                    <img src="https://static1.lenskart.com/media/desktop/img/Sep21/trans.jpg" class="rounded float-end" alt="...">
+
+                </div>
+            </div> -->
+
+<div class="john">
+    {% for i in data4 %}
+    <form method="post" action="/johnj/">
+        {% csrf_token %}
+        <div class="ij">
+            <p class="hr-lines">{{i.banner_head}}</p>
+            <div class="img2">
+                <img src="{% static 'images/' %}{{i.banner_image}}">
+                <input type="hidden" value="{{i.banner_name}}" name="banner" class="btn">
+                <input type="submit" value="{{i.banner_name}}" class="btn">
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+</div>
+
+
+<!-- <div class="hustlr">
+    {% for i in data4 %}
+    <form method="post" action="/tank">
+        {% csrf_token %}
+        <div class="kl">
+            <p class="hr-lines">AS SEEN ON SHARK TANK</p>
+            <div class="img3">
+
+                <img src="https://static1.lenskart.com/media/desktop/img/Dec22/1-Dec/Homepage-Banner-web.gif">
+                <input type="hidden" value="{{i.banner_name}}" name="banner" class="btn">
+                <input type="submit" value="{{i.banner_name}}" style="width: 100px;color: aquamarine;">
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+</div> -->
+
+
+
+<!-- <div class="mn">
+    <p class="hr-lines">TRENDING SUNGLASSES</p>
+    <div class="img5">
+        <img src="https://static1.lenskart.com/media/desktop/img/Jan23/sunglasses/Sun-Banner-web.gif">
+    </div>
+</div> -->
+
+
+
+
+<div class="find">
+    <p class="hr-lines">FIND THE PERFECT FIT</p>
+    <div class="perfect">
+        <div class="img90">
+            <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/eye-square10.jpg" width="600px"
+                height="600px">
+        </div>
+        <div class="img7">
+            <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/ce-square.jpg" width="580px"
+                height="300px">
+            <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/sun-square.jpg" width="580px"
+                height="300px">
+        </div>
+    </div>
+</div>
+
+
+
+<div class="uv container">
+    <p class="hr-lines">BUY IT YOUR WAY</p>
+    <div class="at">
+
+        <div class="img9">
+            <img src="https://static1.lenskart.com/media/desktop/img/republic/celb-new/call.png">
+            <img src="https://static1.lenskart.com/media/desktop/img/republic/celb-new/wts-up.png" height="200px">
+        </div>
+        <div class="img10">
+            <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/hto.jpg" height="260px">
+            <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/stores.jpg" height="260px">
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="yz">
+    <div class="Brand">
+        <p class="hr-lines">OUR BRANDS</p>
+    </div>
+
+    <div class="img01">
+        <img src="https://static1.lenskart.com/media/desktop/img/Aug21/Desktop/VC-Banner.jpg">
+    </div>
+</div>
+
+<div class="sn">
+    <div class="wx">
+        <p>EYEGLASSES</p>
+        <a href="/eye">View Range</a>
+    </div>
+    <hr style="width: 88%;margin-left: 95px;background-color: black;height: 0.9px;">
+    <div class="b">
+        <div class="box11">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/lenskart-air-la-e15417-w-c1-eyeglasses_csvfile-1701688470121-img_7893.jpg">
+        </div>
+
+        <div class="box12">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/transparent-gold-full-rim-rectangle-lenskart-air-essentials-la-e13517-c2-eyeglasses_csvfile-1695816767916-g_7546_27_09_2023.jpg">
+        </div>
+
+        <div class="box13">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/olive-full-rim-wayfarer-lenskart-hustlr-lh-e16985-w-c2-eyeglasses_img_2273_14march24.jpg">
+        </div>
+        <span class="ra">&#10095;</span>
+        <!-- <div class="box14">
+                            <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/crystal-full-rim-wayfarer-lenskart-hustlr-lh-e16985-w-c5-eyeglasses_img_2262_14march24.jpg>
+                        </div>
+                        <div class="box15">
+                            <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/vincent-chase-vc-e13634-ful-ram-ale-metl-stlbr-c1-eyeglasaas_g_4921.jpg>
+                        </div>
+                        <div class="box16">
+                            <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//l/i/denim-full-rim-wayfarer-lenskart-hustlr-lh-e16985-w-c1-eyeglasses_img_2293_14march24.jpg>
+                        </div> -->
+    </div>
+</div>
+
+<div class="sg">
+    <div class="sunglas">
+        <p style="font-size: 23px;">SUNGLASSES</p>
+        <a href="/sunglasses">View Range</a>
+    </div>
+    <hr style="width: 88%;margin-left: 95px;background-color: black;height: 0.9px;">
+    <div class="sunimg">
+        <div class="box14">
+            <img
+                src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/black-green-full-rim-wayfarer-vincent-chase-athleisure-vc-s14525-c2-sunglasses_g_8300.jpg>
+        </div>
+        <div class="box12">
+            <img
+                src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/matte-gunmetal-black-blue-gradient-full-rim-rectangle-square-vincent-chase-polarized-the-metal-edit-vc-s12934-c1-polarized-sunglasses_vincent-chase-vc-s12934-c1-sunglasses_g_1627_5july23.jpg>
+        </div>
+        <div class="box13">
+            <img
+                src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/maroon-brown-full-rim-round-vincent-chase-polarized-havana-vc-s14596-c2-sunglasses_g_8671_14_3_22.jpg>
+        </div>
+        <span class="ra">&#10095;</span>
+        <!-- <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/matte-black-grey-solid-full-rim-wayfarer-vincent-chase-polarized-air-la-s13164--c1-polarized-sunglasses_vincent-chase-vc-s13164-c1-sunglasses_g_1663_5july23.jpg>
+                        <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gunmetal-black-green-full-rim-geometric-vincent-chase-polarized-the-metal-edit-vc-s12917-c3-sunglasses_vincent-chase-vc-s12917-c3-sunglasses_sunglasses_g_4524_1_5july23.jpg>
+                        <img src=https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//v/i/gold-brown-full-rim-round-vincent-chase-the-metal-edit-vc-s13112-c10-polarized-sunglasses_vincent-chase-vcs13112-c10-c10-sunglasses_sunglasses_g_8974_28july23.jpg> -->
+    </div>
+</div>
+
+
+<div class="c">
+    <img src="https://static1.lenskart.com/media/desktop/img/Nov20/25-Nov/Banner05_Final2ndDec21.jpg">
+</div>
+
+<div class="d">
+    <div class="zero">
+        <p>WITH ZERO POWER COMPUTER BLU GLASSES</p>
+        <a href="">View Range</a>
+    </div>
+    <hr style="width: 88%;margin-left: 95px;background-color: black;height: 0.9px;">
+    <div class="zeroim">
+        <div class="box21">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//h/i/pink-transparent-purple-pink-tortoise-full-rim-rectangle-hooper-flexi-hooper-hp-e15084m-c3-eyeglasses_g_5388_8_12_22.jpg">
+        </div>
+        <div class="box12">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//h/i/kids-glasses:-pink-transparent-full-rim-rectangle-kids--8-12-yrs--hooper-astra-hooper-hp-e10016l-c4_hooper-hp-e10016-c4-eyeglasses_g_1003_22_march23.jpg.jpg">
+        </div>
+        <div class="box12">
+            <img
+                src="https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/371x178/9df78eab33525d08d6e5fb8d27136e95//h/i/kids-glasses:pink-transparent-full-rim-square-8-12-yrs-hooper-astra-hooper-c3_kids-glasses_transparent-pink-transparent-full-rim-square-8-12-yrs-hooper-astra-hooper-c3_g_8544_image_pla_23_03_2022.jpg">
+        </div>
+        <span class="ra">&#10095;</span>
+    </div>
+</div>
+<div class="i1">
+    <img src="https://static5.lenskart.com/media/uploads/whatsapp-1.png">
+</div>
+
+<div class="nn">
+    <br>
+    <p>MEET OUR HAPPY CUSTOMERS</p>
+    <div class="youtube">
+        <div class="box20">
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/HYPqf_eVvvM?si=n6Rq0Coj4i3NDRaT"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="box17">
+            <iframe width="560" height="400" src="https://www.youtube.com/embed/SQm3RxXRunw?si=tpRH5tWNFyPkDrAQ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
