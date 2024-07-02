@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block start %}
+
+{% load static %}
+
+<div class="container"style="margin-top: 6%; margin-bottom; 10%;">
+    {% for i in data %}
+
+    <!-- <div class="by" style="height: 330px;margin-left: 10px;margin-right: 10px;margin-top: 10px;"> -->
+    <a href="/shop">
+        <div class="by" style="height: 330px;">
+
+            <div class="img-contain">
+                <img src="{% static 'images/' %}{{i.image}}" style="height: 70%;margin-top: 10px;">
+
+                <a href="" class="cartbtn">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </div>
+            <div class="str">
+                <div class="pr">
+                    <h3>{{i.rating}}</h3>
+                </div>
+                <h4>{{i.title}}</h4>
+                <h6>{{i.description}}</h6>
+                <h5>{{i.price}}</h5>
+                <p>{{i.offer}}</p>
+            </div>
+        </div>
+    </a>
+
+    {% endfor %}
+</div>
+
+
+{% endblock %}
