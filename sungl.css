@@ -1,0 +1,117 @@
+/* .air{
+    height: 300px;
+    width: 300px;
+    padding-left: 20px;
+    justify-content: center;
+    background-color: rgb(226, 15, 15);
+    margin-top: 2%;
+} */
+
+
+.container {
+    width: calc(100% - 200px);
+    /* height: 100vh; */
+    /* background-color: rgb(231, 228, 228); */
+    background-color: white;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    justify-content: space-between;
+    gap: 21.8px;
+    align-items: start;
+    /* row-gap: 0px; */
+    /* margin-right: 2%; */
+    width: 100%;
+}
+
+.by {
+    position: relative;
+    width: 320px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 0 50px rgba(133, 126, 126, 0.252);
+    margin-bottom: 2%;
+}
+
+
+.by h2 {
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.by h4 {
+    font-size: 20px;
+    /* padding: 0px; */
+}
+
+.by img {
+    width: 80%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 0px 60%;
+    border-radius: 20px;
+}
+
+.by .img-contain {
+    position: relative;
+}
+
+.cartbtn {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    color: black;
+}
+
+
+/* @media screen and (min-width:900px) {} */
+
+@media screen and (max-width:500px) {
+    .container {
+        width: calc(100% - 50px);
+    }
+    .box {
+        width: 100%;
+    }
+}
+
+.str{
+    /* width: 20%;
+    
+    background-color: rgb(174, 206, 207);
+    border-radius: 20px;
+    justify-content: center;*/
+    margin-left: 2%; 
+    margin-top: 30px;
+}
+h3{
+    margin-top: 3%;
+}
+
+h6{
+    color: rgb(152, 157, 162);
+    font-size: small;
+}
+h5{
+    font-size: 18px;
+    justify-content: space-between;
+}
+
+.by p{
+    background-color: rgb(188, 138, 138);
+    color: yellow;
+    font-size: medium;
+    margin-bottom: 0%;
+    margin-left: 0%;
+}
