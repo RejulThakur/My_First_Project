@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block start %}
+{% load static %}
+{% for i in data %}
+
+<div class="container" style="margin-top: 6%;">
+    <form method="post" action="/wishlist/">
+        {% csrf_token %}
+        <div class="wishlist">
+            <div class="heading">
+                <h1>My Wishlist</h1>
+            </div>
+            <div class="cart1">
+                <div class="cart-img">
+                    <img src="{% static 'images/' %}{{i.pro_d.image.name}}">
+                </div>
+                <div class="cart-detail">
+                    <h5>{{i.pro_d}}</h5>
+                    <h6>₹{{i.pro_d.price}}</h6>
+                </div>
+                <div class="Move">
+                    <input type="submit" value="Add To Cart">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endfor %}
+{% endblock %}
