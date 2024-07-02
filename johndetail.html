@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block start %}
+{% load static %}
+
+{% for i in dataj %}
+<div class="caption">
+    <div class="cont">
+        {{i.caption}}
+    </div>
+    <div class="ct">
+        {{i.cont}}
+    </div>
+</div>
+<div class="imag" style="display: flex;">
+
+    <div class="product" style="margin-top: 20px;">
+        <img src="{% static 'images/' %}{{i.image1}}"
+            style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px; margin-right: 5px;">
+        <img src="{% static 'images/' %}{{i.image2}}"
+            style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px;">
+        <div class="im" style="margin-top: 20px;">
+            <img src="{% static 'images/' %}{{i.image3}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px; margin-right: 5px;">
+            <img src="{% static 'images/' %}{{i.image4}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px;">
+        </div>
+        <div class="img1" style="margin-top: 20px;">
+            <img src="{% static 'images/' %}{{i.image5}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px; margin-right: 5px;">
+            <img src="{% static 'images/' %}{{i.image6}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px;">
+        </div>
+        <div class="img2" style="margin-top: 20px;">
+            <img src="{% static 'images/' %}{{i.image7}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px; margin-right: 5px;">
+            <img src="{% static 'images/' %}{{i.image8}}"
+                style="height: 500px;width: 500px;margin-top: 1px;border-radius: 10px;">
+        </div>
+
+
+    </div>
+    <div class="detail">
+        <p>{{i.name}}</p>
+        <h1>{{i.h1}}</h1>
+        <p>{{i.description1}}</p>
+        <h5>{{i.rating1}}</h5>
+        <h2>{{i.price}}</h2>
+        <h3>{{i.offer2}}</h3>
+        <input type="submit" value="Add To Cart" style="height: 38px; border-radius: 4px;">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess1}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess2}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess3}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess4}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess5}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess6}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess7}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess8}}">
+        <br>
+        <img src="{% static 'images/' %}{{i.airess9}}">
+    </div>
+
+</div>
+
+
+{% endfor %}
+
+
+{% endblock %}
