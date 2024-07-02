@@ -1,0 +1,160 @@
+.product{
+    width: 1024px;
+    margin-left: 20px;
+    margin-right: 0px;
+
+}
+.detail{
+    margin-top: 30px;
+    margin-left: 20px;
+    /* margin-right: 60px; */
+}
+
+.detail h1{
+    font-size: 20px;
+}
+.detail p{
+    color: darkgrey;
+    font-size: 20px;
+}
+
+h2{
+    color: turquoise;
+    margin-top: 15px;
+}
+
+.detail h3{
+    background-color: rgb(247, 241, 222);
+    font-size: 17px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 5px;
+    margin-top: 20px;
+}
+
+.detail .inp{
+    background-color: turquoise;
+    border: solid turquoise;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 15px;
+    padding-bottom: 46px;
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+.detail img{
+    width: 408px;
+    margin-top: 18px;
+}
+
+.detail h5{
+    border: rgb(160, 159, 159) solid;
+    border-radius: 1px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7px;
+    width: 181px;
+    font-size: 18px;
+    margin-right: 225px;
+}
+
+.caption{
+    margin-left: 24px;
+    margin-top: 7px;
+    color: rgb(152, 157, 162);
+    font-size: 14px;
+    display: flex;
+}
+
+.cont{
+    margin-left: 0px;
+}
+
+.ct{
+    margin-right: 14px;
+}
+
+
+.review{
+    margin-top: 40px;
+}
+
+.head{
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  } */
+  
+  .quantity {
+    display: flex;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 103.2px;
+    margin-left: 0px;
+  }
+  
+  .quantity button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+  
+  .quantity button:hover {
+    background-color: #2980b9;
+  }
+  
+  .input-box {
+    width: 40px;
+    text-align: center;
+    border: none;
+    padding: 8px 10px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  /* Hide the number input spin buttons */
+  .input-box::-webkit-inner-spin-button,
+  .input-box::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .input-box[type="number"] {
+    -moz-appearance: textfield;
+  }
+
+.q{
+    display: flex;
+}
+  
